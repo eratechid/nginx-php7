@@ -61,7 +61,7 @@ server {
     listen 80;
     server_name $PROXY_DOMAIN;
 
-    root   $DATA_DIR;
+    root   /data/www/microservices/public/;
     index  index.php index.html index.htm;
 
     location / {
@@ -69,7 +69,7 @@ server {
     }
 
     location ~ \.php$ {
-        root           /data/www;
+        root           /data/www/microservices/public/;
         fastcgi_pass   127.0.0.1:9000;
         fastcgi_index  index.php;
         include        fastcgi.conf;
@@ -150,7 +150,7 @@ server {
     ssl_session_cache shared:SSL:10m;
     ssl_session_timeout 10m;
 
-    root   $DATA_DIR;
+    root   /data/www/microservices/public/;
     index  index.php index.html index.htm;
 
     location / {
@@ -158,7 +158,7 @@ server {
     }
 
     location ~ \.php$ {
-        root           /data/www;
+        root           /data/www/microservices/public/;
         fastcgi_pass   127.0.0.1:9000;
         fastcgi_index  index.php;
         include        fastcgi.conf;

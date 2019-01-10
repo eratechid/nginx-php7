@@ -170,7 +170,7 @@ server {
         }
         fastcgi_param SCRIPT_FILENAME \$document_root\$real_script_name;
         fastcgi_param SCRIPT_NAME \$real_script_name;
-        fastcgi_param PATH_INFO \$path_info;        
+        fastcgi_param PATH_INFO \$path_info;
     }
 
     location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|flv|ico)$ {

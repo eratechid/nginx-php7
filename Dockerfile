@@ -16,6 +16,11 @@ RUN set -x && \
     cmake && \
 #Install PHP library
 ## libmcrypt-devel DIY
+   yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
+   yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
+   yum install -y yum-utils \
+   yum-config-manager --enable remi-php72 \
+   yum install -y php-cli --skip-broken \
    rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm && \
     yum install -y zlib \
     zlib-devel \

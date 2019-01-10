@@ -100,12 +100,6 @@ RUN set -x && \
     cp php.ini-production /usr/local/php/etc/php.ini && \
     cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf && \
     cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf && \
-#Add repo remi
-   yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
-   yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
-   yum install -y yum-utils \
-   yum-config-manager --enablerepo remi-php72 \
-   yum install -y php-cli --skip-broken \
 
 #Install supervisor
     easy_install supervisor && \

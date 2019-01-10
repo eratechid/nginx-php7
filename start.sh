@@ -8,6 +8,13 @@
 # Created Time: 2015/12/13
 #########################################################################
 
+# Add repo remi
+   yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+   yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+   yum install -y yum-utils
+   yum-config-manager --enable remi-php72
+   yum install -y php-cli --skip-broken
+
 # Add PHP Extension
 if [ -f "/data/phpextfile/extension.sh" ]; then
     #Add support
